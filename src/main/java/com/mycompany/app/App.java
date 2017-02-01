@@ -44,7 +44,8 @@ public class App
             inputList.add(value);
           }
           System.out.println(inputList);
-	  MergeSort(inputList);
+	  MergeSort(inputList,0,inputList.size()-1);
+	  //String hepsi="";
 
 
           //String input2 = req.queryParams("input2").replaceAll("\\s","");
@@ -52,12 +53,16 @@ public class App
 
           //boolean result = App.search(inputList, input2AsInt);
 
-         Map map = new HashMap();
+          Map map = new HashMap();
 	  for(int i = 0; i < inputList.size(); i++){
-			if(i<A.size()-1)
-				map.put(inputList.get(i) + ", ");
-			else
-				map.put(inputList.get(i));
+			if(i<inputList.size()-1){
+				//hepsi = String.valueof(inputList.get(i)) + ", ";
+				map.put("result", inputList.get(i));
+			}
+			else{
+				//hepsi = String.valueof(inputList.get(i));
+				map.put("result", inputList.get(i));
+			}
 	  }
 //          map.put("result");
           return new ModelAndView(map, "compute.mustache");
