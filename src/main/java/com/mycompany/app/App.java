@@ -57,11 +57,11 @@ public class App
 	  for(int i = 0; i < inputList.size(); i++){
 			if(i<inputList.size()-1){
 				//hepsi = String.valueof(inputList.get(i)) + ", ";
-				map.put("result", inputList.get(i));
+				map.put("result", inputList);
 			}
 			else{
 				//hepsi = String.valueof(inputList.get(i));
-				map.put("result", inputList.get(i));
+				map.put("result", inputList);
 			}
 	  }
 //          map.put("result");
